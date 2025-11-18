@@ -8,3 +8,15 @@ let nota03 = Number.parseFloat(prompt ("Digite sua terceira Nota"))
 let nota04 = Number.parseFloat(prompt ("Digite sua quarta Nota"))
 
 let media = (nota01 + nota02 + nota03 + nota04) / 4
+
+if (media>7){
+    console.log ("Aprovado")
+}
+
+else if (media >5 && media <7) {
+    console.log("Recuperação")
+}
+
+else {
+    console.log ("Reprovado")
+}
