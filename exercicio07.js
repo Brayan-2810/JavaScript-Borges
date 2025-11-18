@@ -28,5 +28,17 @@ if (total <= 100) {
 }
 else if (total <= 200){
     desconto = 0.1
-    console.log("Ovalor de desconto foi: " + (desconto*100) + "%")
+    console.log("O valor de desconto foi: " + (desconto*100) + "%")
 }
+else if (total > 200) {
+    desconto = 0.2
+    console.log("O valor do desconto foi: " , (desconto*100) + "%")
+}
+
+let valorDesconto = (total*desconto)
+console.log("Desconto de R$" + valorDesconto.toFixed(2))
+
+
+let totalFinal = total - (total*desconto)
+console.log("Ovalor final da compra com o desconto: R$" + totalFinal.toFixed(2))
+
