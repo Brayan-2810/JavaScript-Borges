@@ -2,6 +2,7 @@
 // notas e a mensagem de APROVADO para média superior ou igual a 7,0 RECUPERAÇÃO para
 // notas entre 5.0 e 7,0 ou a mensagem de REPROVADO para média inferior a 5,0.
 
+// receber as 4 notas
 let nota01 = Number.parseFloat(prompt("Digite sua primeira nota"))
 let nota02 = Number.parseFloat(prompt ("Digite sua segunda nota"))
 let nota03 = Number.parseFloat(prompt ("Digite sua terceira Nota"))
