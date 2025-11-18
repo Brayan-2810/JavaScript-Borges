@@ -2,7 +2,7 @@
 // ímpar.
 
 let numero1 = window.prompt("Digite o número")
-if (numero1 % 2 ==)
+if (numero1 % 2 == 0)
     {
         console.log("Ele é par")
     } 

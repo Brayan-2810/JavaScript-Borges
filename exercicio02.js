@@ -1,5 +1,6 @@
 
-let numero = Number.parseInt(prompt("Digite um número de 1 a 7"))
+let numero = window.prompt("Digite um número de 1 a 7")
+
 switch (numero) {
     case "1":
         console.log("Segunda-Feira")
@@ -22,7 +23,7 @@ switch (numero) {
         break;
 
     case "6":
-        console.log("Sábado")
+        console.log("Sábado")``
         break;
 
     case "7":
