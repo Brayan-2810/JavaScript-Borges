@@ -31,6 +31,6 @@ switch (numero) {
         break;
 
     default:
-        console.log("Não é um número de 1 a 7.")
+        console.log("Não é um número de 1 a 7")
         break;
 }
