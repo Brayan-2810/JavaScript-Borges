@@ -1,10 +1,52 @@
 // Fazer um menu de exercícios utilizando os exemplos e
 // exercícios feitos em aula.
-// • Cada exercício deve ser encapsulado em uma função, e
-// o menu deve executar essas funções;
-// • O usuário poderá escolher qual exercício ele quer
-// visualizar;
-// • O usuário deverá digitar 0 para sair do menu;
+
+//Sintaxe - escrita do codigo
+
+let opcaoEscolhido = 0;
+
+do {
+    opcaoEscolhido = parseInt(prompt(`
+    ========= 👀 MENU DE EXERCÍCIOS 👀 ========
+    
+    Digite um número das opcões:
+    0 - Sair
+    1 - Login 
+    2 - Semana 
+    3 - Par ou Impar
+    4 - Tabuada 
+    5 - Calcúlo de IMC
+
+    ==========================================
+    `));
+
+    switch (opcaoEscolhido) {
+        case 0:
+            alert("Volte sempre...");
+            break;
+        case 1:
+            Login();
+            break;
+        case 2:
+            Semana();
+            break;
+        case 3:
+            ParImpar();
+            break;
+        case 4:
+            Tabuada();
+            break;
+        case 5:
+            IMC();
+            break;
+
+        default:
+            alert("Opção inválida, escolha! Escolha uma opção que exista no nosso sistema");
+            break;
+    }
+} while (opcaoEscolhido != 0);
+
+
 
 function Login() {
     let login = prompt("Digite o seu usuário:")
@@ -24,7 +66,7 @@ function Semana() {
 
     switch (numero) {
         case "1":
-            console.log("Segunda-Feira")
+            alert("Segunda-Feira")
             break;
 
         case "2":
@@ -77,43 +119,37 @@ function Tabuada() {
 
 }
 
-function SairdoJogo() {
-    let num = parseInt(prompt("Digite um número:"))
+function IMC() {
+    let altura = Number.parseFloat(prompt("Informe sua altura (em metros)"))
+    let peso = Number.parseFloat(prompt("Informe seu peso (em kg)"))
 
-    do {
-        num = parseInt(prompt("Digite um número (Digite 0 para sair): "))
-    } while (num !== 0)
-    console.log("Você digitou 0. O program foi encerrado!")
-}
+    let imc = peso / (altura * altura)
 
+    console.log("Seu IMC é: " + imc)
 
 
 
-window.parseInt(prompt("Digite um número de 1 a 5 para escolher o exercicio (É 0 para sair)"))
-while (escolher !== "0") {
-    switch (escolher) {
-        case "1":
-            Login()
-            break;
+    if (imc < 18.5) {
+        console.log("Abaixo do peso")
+    }
 
-        case "2":
-            Semana()
-            break;
+    else if (imc >= 18.5 && imc <= 24.9) {
+        console.log("Peso normal;")
+    }
 
-        case "3":
-            ParImpar()
-            break;
+    else if (imc >= 25 && imc <= 29.9) {
+        console.log("Sobrepeso")
+    }
 
-        case "4":
-            Tabuada()
-            break;
+    else if (imc >= 30 && imc <= 34.9) {
+        console.log("Obsidade grau 1")
+    }
 
-        case "5":
-            SairdoJogo()
-            break;
+    else if (imc >= 35 && imc <= 39.9) {
+        console.log("Obesidade grau 2")
+    }
 
-        default:
-            console.log ("Digite um número valido")
-            break;
+    else {
+        console.log("Obesidade grau 3")
     }
 }
